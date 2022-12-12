@@ -18,14 +18,12 @@ class Paddle():
         if left:
             if keys[pygame.K_w]:
                 self.pos -= self.speed
-
-            if keys[pygame.K_s]:
+            elif keys[pygame.K_s]:
                 self.pos += self.speed
         else:
             if keys[pygame.K_UP]:
                 self.pos -= self.speed
-
-            if keys[pygame.K_DOWN]:
+            elif keys[pygame.K_DOWN]:
                 self.pos += self.speed
 
     #edges logic
@@ -34,7 +32,6 @@ class Paddle():
                 self.speed = 0
                 if keys[pygame.K_s]:
                     self.speed = 2
-
             elif self.pos == win_height - self.height:
                 self.speed = 0
                 if keys[pygame.K_w]:
@@ -44,7 +41,6 @@ class Paddle():
                 self.speed = 0
                 if keys[pygame.K_DOWN]:
                     self.speed = 2
-
             elif self.pos == win_height - self.height:
                 self.speed = 0
                 if keys[pygame.K_UP]:
@@ -54,7 +50,7 @@ class Paddle():
     def get_pos(self):
         return self.pos
     
-    def get_sapcer(self):
+    def get_spacer(self):
         return self.spacer
     
     def get_width(self):
