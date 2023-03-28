@@ -25,8 +25,7 @@ while running:
     keys = pygame.key.get_pressed()   
         
     '''game logic'''
-
- 
+    
     ball.check_bounce(p1, p2, win_w)
     if ball.pos_x >= win_w:
         split_score[0] = (f"{score1}")
